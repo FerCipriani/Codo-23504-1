@@ -9,10 +9,13 @@
     
     <link rel="ICON" type="iMAGEN/PNG" href="img\favicon.svg">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ingrid.css">
+    <link rel="stylesheet" href="css/contacto.css">
 
     <script src="https://kit.fontawesome.com/b8f5b7d805.js" crossorigin="anonymous"></script>
-    <script defer src="index.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/contacto.js" defer></script>
   </head>
 
 <body>
@@ -52,11 +55,38 @@
 
 
 <!-----Cuerpo Principal----->
-<p>Pagina de contacto (acá va al formulario) y se puede dejar el QR mas abajo</p>
 
-<div class="QR">
-  <img src="img\qrest150.png" alt="QR">
-</div>
+ <!----- Formulario ----->
+
+ <form action="#" target="" method="get" name="formDatosPersonales">
+
+  <h2>Formulario </h2>
+<br>
+  <label for="nombre">Nombre:</label>
+  <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+
+  <label for="apellidos">Apellidos:</label>
+  <input type="text" name="apellidos" id="apellidos" placeholder="Apellido" />
+
+
+  <label for="email" />Email:</label>
+  <input type="email" name="email" id="email" placeholder="Email" required />
+
+  <label for="asunto">Asunto:</label>
+  <input type="text" name="asunto" id="asunto" placeholder="Asunto" />
+
+  <label for="mensaje">Mensaje:</label>
+  <textarea name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 carácteres"
+    maxlength="300"></textarea>
+
+  <input type="submit" name="enviar" value="Enviar datos" />
+
+  <input type="submit" value="Borrar">
+
+</form>
+<br><br>
+
+
 
 
 <!-----Pie de Pagina----->
