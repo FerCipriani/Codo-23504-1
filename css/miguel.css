@@ -157,8 +157,8 @@ section {
   
   } 
 
-ol {
-  color: darkslategray; /* color de texto dentro de los elementos <ol> */
+ol, li {
+  color: darkslategray; /* color de texto dentro de los elementos <ol> y <li> */
 }
 
 h4 {color: darkslategray;}
