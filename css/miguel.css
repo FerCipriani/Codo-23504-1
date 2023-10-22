@@ -153,13 +153,9 @@ section {
     }
     
     h2 { color: #09c71c ;}
-   p { color: darkslategray;
+   p, ol, ul, li { color: darkslategray;
   
   } 
-
-ol, ul, li {
-  color: darkslategray; /* color de texto dentro de los elementos <ol>. <ul> y <li> */
-}
 
 h4 {color: darkslategray;}
 
