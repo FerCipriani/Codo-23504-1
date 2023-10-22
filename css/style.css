@@ -180,14 +180,6 @@ h4 {
 }
 
 
-.QR{
-  width: 150px;
-  height: 150x;
-
-  margin: auto;
-  
-}
-
 /***** Celular *****/
 @media (max-width: 800px) {
 
@@ -237,6 +229,37 @@ h4 {
   }
 
  }
+
+
+ /***** Acerca *****/
+
+ .acerca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ColorFuente);
+  margin-top: 5%;
+  padding: 15%, 15%;  
+ }
+
+ .cuerpo {
+  transition: all 0.3s; 
+ }
+ .cuerpo :hover {
+  color: var(--ColorLink);
+  transform: scale(1.1);
+ }
+
+ .QR{
+  width: 150px;
+  height: 150x;
+  margin: 5%;
+  transition: all 0.3s; 
+}
+
+.QR:hover {
+  transform: scale(1.1);  
+}
 
  /***** Footer *****/
 footer {
