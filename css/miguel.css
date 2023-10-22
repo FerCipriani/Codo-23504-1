@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+    /* font-size: 20px; */
+}
+
+:root {
+  --ColorEncabezado: #910973;
+  --ColorFondo: #dfded9;
+  --ColorFuente: #d6ad18;
+  --ColorLink: #09c71c;
+}
+
+body {
+  background-color: var(--ColorFondo);
+  /* font-family: sans-serif; */
+  padding: 95px 25px 0;
+  padding-bottom: 45px;
+  }
+
+.header {
+  background-color: var(--ColorEncabezado);
+  position: fixed;
+  height: 80px; /*deberia ser menor, pero queda descentrado...*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  border-bottom: 1px solid var(--ColorFuente);
+  
+}
+
+
+/***** Este es el contenedor de la cabecera *****/
+.nav-cabecera {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+/* Contenedor del Logo */
+.header .logo img{
+  width: auto;
+  height: 50px;
+   align-content:center;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover{
+  transform: scale(1.3);
+}
+
+.logo {
+  padding: 13px 20px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px; 
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 47px;/*con esto controlo la alineacion vertical!*/
+  width: max-content;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-menu-link {
+  color: var(--ColorFuente);
+  text-decoration: none;
+  padding: 18px 12px;
+  transition: all 0.3s;
+}
+
+
+.nav-menu-link:hover {
+  color: var(--ColorLink);
+  transform: scale(1.3);
+  /* transition: 0.5s; */  
+}
+
+
+/* Botón hamburgesa */
+.nav-toggle {
+  color: var(--ColorFuente);
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 10px;
+  cursor: pointer;
+  display: none;
+  padding-right: 20px;
+}
+
+
+
+/***** Integrantes *****/
+.Integrantes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 5%;
+  
+}
+
+.Cuerpo .Integrantes li{
+  list-style: none;
+}
+
+.Imagen-Integrante img{
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  padding: 5% 5%;
+}
+
+.Imagen-Integrante img:hover{
+  transition: all 0.3s; 
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+.Integrante{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center    
+}
+
+h4 {
+  color: var(--ColorEncabezado);
+}
+
+/***** cuerpo principal *****/
+
+section {
+    text-align: justify;
+    padding: 0px 10%;
+    border-radius:10px;
+    font-size: larger;
+    }
+    
+    h2 { color: #09c71c ;}
+   p { color: darkslategray;
+  
+  } 
+h4 {color: darkslategray;}
+
+
+/* Nueva sección para los títulos */
+h1 {
+  color: #00a51e; /* Tono verde opaco */
+}
+
+h2 {
+  color: #2ecc71; /* Tono verde claro */
+}
+
+
+
+/***** Links *****/
+
+.links-utiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none; 
+  
+}
+
+.links-utiles .links {
+  background: var(--ColorEncabezado);
+  padding: 30px 30px;
+  /* display: block; */
+  
+  text-align: center;
+  text-decoration: none;
+  width: 350px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 28px; 
+  border: 1px solid var(--ColorFuente);
+  
+  }
+
+.links-utiles .links a{
+  text-decoration: none;
+  color: var(--ColorFuente);
+  transition: all 0.3s; 
+ 
+ }
+
+.links-utiles .links a:hover {
+  color: var(--ColorLink);
+  transform: scale(1.5);
+}
+
+
+/***** Celular *****/
+@media (max-width: 800px) {
+
+  .logo {
+    padding: 15px 20px;   
+  }
+
+
+  .nav-cabecera{
+    display: flex;
+    align-content: center;
+    
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    background-color: var(--ColorEncabezado);
+    position: fixed;
+    top: 79px;
+    /* overflow-y: auto; */
+    left: 100%; /*Controlo lo que sala hacia la izquierda*/
+
+    border-bottom: 1px solid var(--ColorFuente);
+    border-left: 1px solid var(--ColorFuente);
+
+    border-radius: 0  0  0 18px; 
+    transition: left 0.5s;
+  
+
+  }
+
+  .nav-menu-item {
+    line-height: 25px; /*Alto entre lineas del menu*/
+  }
+
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu.nav-menu_visible {
+    right: 0;/*Esto oculta el menu */
+    left: initial; 
+
+  }
+
+ }
+
+
+ /***** Acerca *****/
+
+ .acerca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ColorFuente);
+  margin-top: 5%;
+  padding: 15%, 15%;  
+ }
+
+ .cuerpo {
+  transition: all 0.3s; 
+ }
+ .cuerpo :hover {
+  color: var(--ColorLink);
+  transform: scale(1.1);
+ }
+
+ .QR{
+  width: 150px;
+  height: 150x;
+  margin: 5%;
+  transition: all 0.3s; 
+}
+
+.QR:hover {
+  transform: scale(1.1);  
+}
+
+ /***** Footer *****/
+footer {
+  background:  var(--ColorEncabezado);
+  position: fixed ; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 5%;
+  height: 45px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; 
+  border-top: 1px solid var(--ColorFuente);
+}
+
+.logo-Pie img{
+  width: 35px;
+  height: 25px;
+  transition: all 0.3s;
+}
+
+.logo-Pie img:hover{
+  transform: scale(1.1);
+  }
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials li{
+  margin: 0 5px;
+}
+
+.socials a i{
+  text-decoration: none;
+  color: var(--ColorFuente);
+  width: 20px;
+  /* padding: 10px; */
+  transition: all 0.3s;
+}
+
+.socials a i:hover{
+  color: var(--ColorLink);
+  transform: scale(1.25);
+}
+
+.derechos p{
+  display: flex;
+  text-align: center;  
+  font-size: 12px;
+  color: var(--ColorFuente);
+  padding-left: 30px
+  transition: all 0.3s;         
+}
+
+.derechos p:hover{ 
+  color: var(--ColorLink);    
+}
